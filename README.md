@@ -1,4 +1,4 @@
-# <p align="center"> Face Detection Recognition </p>
+# <p align="center"> Face Detection & Recognition System </p>
 <p align="center"> Count the number of Known and Unknown people in a specific area from video stream. </p>
 
 
