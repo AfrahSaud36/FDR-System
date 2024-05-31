@@ -132,7 +132,7 @@ Main Sections
 * The faces are detected and cropped using the MTCNN (Multi-task Cascaded Convolutional Networks).
 * The face embeddings are generated using the InceptionResnetV1 model pre-trained on the VGGFace2 dataset.
 
-  ```pyhon
+  ```python
 
   # Detect faces and extract embeddings
   faces, _ = mtcnn(img, return_prob=True)
@@ -146,7 +146,7 @@ Main Sections
 * The recognize_face function is used to compare the extracted face embeddings with reference embeddings stored in the MongoDB database.
 * The comparison is done using the cosine similarity measure. If the similarity exceeds a threshold, the face is recognized.
 
-  ```pyhon
+  ```python
        def recognize_face(reference_data, query_embedding, threshold=0.7):
        for reference_embedding, name in reference_data:
         # Resize reference embedding to match query embedding dimensionality
@@ -162,7 +162,7 @@ Main Sections
 * For each detected face, embeddings are generated and compared with the stored reference embeddings using the recognize_face function.
 * The results are used to draw bounding boxes and labels around recognized faces in the video frames.
   
-    ```pyhon 
+    ```python 
         # Main loop for processing video frames
         while cap.isOpened():
             # Capture frame from video
@@ -205,3 +205,8 @@ Main Sections
 
 We created a face detection and recognition system to solve the challenge of rapidly and reliably counting known and unknown persons in a predetermined region. We used the MTCNN model to identify faces and the Inception-ResNet-v1 model to recognize faces. 
 During the project's execution, we experienced several issues, including the challenge of selecting an acceptable model to design the system and then tying it to the web application. We aim to have done the finest and smoothest work possible. While conducting testing, the system will accomplish the predicted results of face detection and identification in educational situations
+
+## Demo 
+
+![Demo-min](https://github.com/AfrahSaud36/FDR-System/assets/138797663/3fc043e2-dd91-4f22-b5eb-bc97b10bf62b)
+
